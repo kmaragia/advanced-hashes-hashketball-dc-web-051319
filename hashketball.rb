@@ -115,16 +115,17 @@ def game_hash
   }
 end
   
-def num_points_scored(name)
-  hash = game_hash
-  hash.each do |location, info| 
-    info.each do |attribute, stuff| 
-      if stuff.include?(name) 
-        puts hash[location][attribute][name][:points]
+def num_points_scored(player_name)
+  x = game_hash
+  x.each do |one, other| 
+    other.each do |two, another| 
+      if another.include?(player_name) 
+        return x[one][two][player_name][:points]
       end
     end
   end
 end
+num_points_scored("Ben Gordon")
 
 
 def team_names
