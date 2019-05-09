@@ -8,15 +8,6 @@ def num_points_scored(player_name)
 end
 
 def shoe_size(player_name)
-  game_hash().each do |home_or_away,values|
-    value.each do |teams, second|
-      second.each do |first, after|
-        if first == player_name
-          return player_name[:shoe]
-        end
-      end
-    end
-  end
 end
 
 def team_colors(team_name)
