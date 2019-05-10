@@ -125,6 +125,32 @@ def num_points_scored(player_name)
     end
   end
 end
+num_points_scored("Bismak Biyombo")
+
+def shoe_size(player_name)
+  x = game_hash
+  x.each do |one, other| 
+    other.each do |two, another| 
+      if another.include?(player_name) 
+        return x[one][two][player_name][:shoe]
+      end
+    end
+  end
+end
+
+shoe_size("Bismak Biyombo")
+
+def team_colors(team_name)
+  x = game_hash
+  x.each do |one, other|
+    other.each do |two, another|
+      if another.include?(team_name) 
+        return x[one][:colors]
+      end
+    end
+  end
+end
+team_colors("Brooklyn Nets")
 
 
 
